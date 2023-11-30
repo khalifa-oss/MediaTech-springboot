@@ -78,5 +78,6 @@
         <addForeignKeyConstraint baseColumnNames="client_id" baseTableName="bills" constraintName="FK_BILLS_ON_CLIENT"
                                  referencedColumnNames="id_client" referencedTableName="clients"/>
     </changeSet>
+    <include file="/db/changelog/2023/11/1-02-changelog.xml"/>
 
 </databaseChangeLog>
