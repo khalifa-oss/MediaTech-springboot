@@ -12,3 +12,6 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/2023/11/1-01-changelog.xml
