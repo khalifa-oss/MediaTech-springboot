@@ -1,6 +1,7 @@
 package com.sk.mediatechspringboot.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class UserApplication implements Serializable {
     @Column(nullable = false)
     private  String username;
     @Column(nullable = false)
+    @Size(min = 7)
     private String password;
 
     @ManyToMany (cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
