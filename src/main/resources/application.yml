@@ -14,4 +14,4 @@ spring:
         format_sql: true
   liquibase:
     enabled: true
-    change-log: classpath:db/changelog/2023/11/1-01-changelog.xml
+    change-log: classpath:db/changelog/2023/11/changelog-master.yml

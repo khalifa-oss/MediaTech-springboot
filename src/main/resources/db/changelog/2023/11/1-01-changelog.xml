@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd"
         objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
-    <changeSet id="1701336578232-1" author="khalifa saidi (generated)">
+    <changeSet id="1" author="khalifa saidi (generated)">
         <createTable tableName="bill_prod_quantity">
             <column name="quantity_product" type="DOUBLE"/>
             <column name="bill_id" type="BIGINT">
@@ -16,7 +16,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet id="1701336578232-2" author="khalifa saidi (generated)">
+    <changeSet id="2" author="khalifa saidi (generated)">
         <createTable tableName="bills">
             <column name="id_bill" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="pk_bills"/>
@@ -30,7 +30,7 @@
             <column name="client_id" type="BIGINT"/>
         </createTable>
     </changeSet>
-    <changeSet id="1701336578232-3" author="khalifa saidi (generated)">
+    <changeSet id="3" author="khalifa saidi (generated)">
         <createTable tableName="clients">
             <column name="id_client" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="pk_clients"/>
@@ -47,7 +47,7 @@
             <column name="phone_client" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet id="1701336578232-4" author="khalifa saidi (generated)">
+    <changeSet id="4" author="khalifa saidi (generated)">
         <createTable tableName="products">
             <column name="id_product" type="BIGINT">
                 <constraints primaryKey="true" primaryKeyName="pk_products"/>
@@ -64,20 +64,19 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet id="1701336578232-5" author="khalifa saidi (generated)">
+    <changeSet id="5" author="khalifa saidi (generated)">
         <addForeignKeyConstraint baseColumnNames="bill_id" baseTableName="bill_prod_quantity"
                                  constraintName="FK_BILLPRODQUANTITY_ON_BILL" referencedColumnNames="id_bill"
                                  referencedTableName="bills"/>
     </changeSet>
-    <changeSet id="1701336578232-6" author="khalifa saidi (generated)">
+    <changeSet id="6" author="khalifa saidi (generated)">
         <addForeignKeyConstraint baseColumnNames="product_id" baseTableName="bill_prod_quantity"
                                  constraintName="FK_BILLPRODQUANTITY_ON_PRODUCT" referencedColumnNames="id_product"
                                  referencedTableName="products"/>
     </changeSet>
-    <changeSet id="1701336578232-7" author="khalifa saidi (generated)">
+    <changeSet id="7" author="khalifa saidi (generated)">
         <addForeignKeyConstraint baseColumnNames="client_id" baseTableName="bills" constraintName="FK_BILLS_ON_CLIENT"
                                  referencedColumnNames="id_client" referencedTableName="clients"/>
     </changeSet>
-    <include file="/db/changelog/2023/11/1-02-changelog.xml"/>
 
 </databaseChangeLog>

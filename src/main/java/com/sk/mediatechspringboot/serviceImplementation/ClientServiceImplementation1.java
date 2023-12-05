@@ -6,6 +6,7 @@ import com.sk.mediatechspringboot.repository.ClientRepository;
 import com.sk.mediatechspringboot.service.ClientService;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
@@ -66,5 +67,11 @@ public class ClientServiceImplementation1 implements ClientService {
 
 
 
+    }
+
+    @Override
+    public ClientDto updateClient(ClientDto clientDto) {
+
+        return null;
     }
 }

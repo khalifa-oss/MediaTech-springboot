@@ -32,4 +32,9 @@ public class ClientServiceImplementation2 implements ClientService {
     public void deleteClient(Long id) {
 
     }
+
+    @Override
+    public ClientDto updateClient(ClientDto clientDto) {
+        return null;
+    }
 }

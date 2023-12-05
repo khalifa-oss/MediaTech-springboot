@@ -5,7 +5,8 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd"
         objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
-    <changeSet id="1701340791598-1" author="khalifa saidi (generated)">
+
+    <changeSet id="8" author="khalifa saidi (generated)">
         <createTable tableName="roles">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_roles"/>
@@ -13,7 +14,7 @@
             <column name="role_user" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet id="1701340791598-2" author="khalifa saidi (generated)">
+    <changeSet id="9" author="khalifa saidi (generated)">
         <createTable tableName="user_profile">
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_user_profile"/>
@@ -25,7 +26,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet id="1701340791598-3" author="khalifa saidi (generated)">
+    <changeSet id="10" author="khalifa saidi (generated)">
         <createTable tableName="users">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users"/>
@@ -38,7 +39,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet id="1701340791598-4" author="khalifa saidi (generated)">
+    <changeSet id="11" author="khalifa saidi (generated)">
         <createTable tableName="users_roles">
             <column name="roles_id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_users_roles"/>
@@ -48,17 +49,17 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet id="1701340791598-5" author="khalifa saidi (generated)">
+    <changeSet id="12" author="khalifa saidi (generated)">
         <addForeignKeyConstraint baseColumnNames="user_application_id" baseTableName="user_profile"
                                  constraintName="FK_USER_PROFILE_ON_USER_APPLICATION" referencedColumnNames="id"
                                  referencedTableName="users"/>
     </changeSet>
-    <changeSet id="1701340791598-6" author="khalifa saidi (generated)">
+    <changeSet id="13" author="khalifa saidi (generated)">
         <addForeignKeyConstraint baseColumnNames="roles_id" baseTableName="users_roles"
                                  constraintName="fk_userol_on_role" referencedColumnNames="id"
                                  referencedTableName="roles"/>
     </changeSet>
-    <changeSet id="1701340791598-7" author="khalifa saidi (generated)">
+    <changeSet id="14" author="khalifa saidi (generated)">
         <addForeignKeyConstraint baseColumnNames="user_application_id" baseTableName="users_roles"
                                  constraintName="fk_userol_on_user_application" referencedColumnNames="id"
                                  referencedTableName="users"/>

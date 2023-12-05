@@ -10,5 +10,6 @@ public interface ClientService {
     ClientDto findClientByName(String name);
     ClientDto saveClient(ClientDto clientDto);
      void deleteClient(Long id);
+     ClientDto updateClient(ClientDto clientDto);
 
 }
